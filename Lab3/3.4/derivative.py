@@ -11,7 +11,8 @@ def calc_left_derivative(x, X, Y):
         print("There is no such point!")
         return
     elif i == 0:
-        return 0
+        print("There is no left point!")
+        return 
     return (Y[i] - Y[i - 1]) / (X[i] - X[i - 1])
 
 
@@ -21,7 +22,8 @@ def calc_right_derivative(x, X, Y):
         print("There is no such point!")
         return
     elif i == len(X) - 1:
-        return 0
+        print("There is no right point!")
+        return
     return (Y[i + 1] - Y[i]) / (X[i + 1] - X[i])
 
 

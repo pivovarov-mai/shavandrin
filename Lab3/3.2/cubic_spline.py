@@ -25,10 +25,13 @@ def calc_c(X, Y):
 
 def find_range(X, x_point):
     ind = 0
-    for i in range(len(X)):
-        if X[i] >= x_point:
+    for i in range(len(X) - 1):
+        if X[i] <= x_point < X[i + 1]:
             ind = i
             break
+    if ind == 0 or ind == len(X) - 1:
+        print("This is boundary point")
+        return
     return ind
 
 
